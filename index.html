@@ -4,15 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My first project</title>
+    <title>Basketball Stuff</title>
 </head>
 
 <body>
-    <p>Here is a test page when using git</p>
-
-    <p>VS Code is <em>awesome!</em></p>
-
-    <p class="text-center">"Using the VS Code Source Control Panel makes committing my code even faster!".</p>
+    <div class="bg-video" style="position:relative;">
+        <button id="enter-btn" aria-label="Enter site" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+                   z-index:10; padding:12px 24px; font-size:18px; background:#ffffffcc;
+                   border:1px solid rgba(0,0,0,0.2); border-radius:6px; cursor:pointer;">
+            Enter
+        </button>
+        <script>
+            (function () {
+                var btn = document.getElementById('enter-btn');
+                btn.addEventListener('click', function () {
+                    btn.style.display = 'none';
+                });
+            })();
+        </script>
+        <video autoplay muted loop id="bg-video " style="width:100%; height:100vh; object-fit:cover;">
+            <source src="assets/videos/230749_small.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
 </body>
 
 </html>
